@@ -4159,8 +4159,13 @@ Page.PageUtils = class PageUtils extends Page.Base {
 		var default_icon = (event.type == 'workflow') ? 'clipboard-flow-outline' : config.ui.data_types.event.icon;
 		var title = node.data.label || event.title;
 		var icon = event.icon || default_icon;
-		var replay = node.data.replay ? `<i class="mdi mdi-replay replay" title="Replay"></i>` : '';
 		var toggle = (this.ID == 'Workflows') ? `<i class="mdi mdi-unfold-more-horizontal toggle_compact clicky" title="Toggle Compact"></i>` : '';
+		
+		var replay = '';
+		if (node.data.replay) {
+			if (this.ID == 'Workflows') replay = `<div class="wf_event_title_pill replay icon" title="Replay"><i class="mdi mdi-replay"></i></div>`;
+			else replay = `<div class="wf_event_title_pill replay"><i class="mdi mdi-replay"></i>Replay</div>`;
+		}
 		
 		html += `<div id="d_wfn_${node.id}" class="${classes.join(' ')}" style="left:${pos.x}px; top:${pos.y}px;" aria-label="${encode_attrib_entities(title)}">
 			<div class="wf_event_title">
@@ -4238,8 +4243,13 @@ Page.PageUtils = class PageUtils extends Page.Base {
 		var params = node.data.params;
 		var title = node.data.label || plugin.title;
 		var icon = plugin.icon || config.ui.data_types.plugin.icon;
-		var replay = node.data.replay ? `<i class="mdi mdi-replay replay" title="Replay"></i>` : '';
 		var toggle = (this.ID == 'Workflows') ? `<i class="mdi mdi-unfold-more-horizontal toggle_compact clicky" title="Toggle Compact"></i>` : '';
+		
+		var replay = '';
+		if (node.data.replay) {
+			if (this.ID == 'Workflows') replay = `<div class="wf_event_title_pill replay icon" title="Replay"><i class="mdi mdi-replay"></i></div>`;
+			else replay = `<div class="wf_event_title_pill replay"><i class="mdi mdi-replay"></i>Replay</div>`;
+		}
 		
 		html += `<div id="d_wfn_${node.id}" class="${classes.join(' ')}" style="left:${pos.x}px; top:${pos.y}px;" aria-label="${encode_attrib_entities(title)}">
 			<div class="wf_event_title">
