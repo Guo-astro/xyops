@@ -911,6 +911,24 @@ The defaults are:
 ```
 
 
+### client.xterm_defaults
+<!-- Title: Terminal UI Settings -->
+
+Client-side configuration for the terminal emulator.  These properties are passed directly to the [xterm.js](https://xtermjs.org/) component.
+
+The defaults are:
+
+```json
+"xterm_defaults": {
+	"minimumContrastRatio": 4.5,
+	"scrollOnEraseInDisplay": true,
+	"lineHeight": 1.2,
+	"scrollback": 10000,
+	"cursorStyle": "block",
+	"cursorBlink": false
+}
+```
+
 
 ## Storage
 <!-- Title: Storage Settings -->
