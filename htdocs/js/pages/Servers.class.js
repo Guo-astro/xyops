@@ -870,7 +870,9 @@ Page.Servers = class Servers extends Page.ServerUtils {
 				
 				html += '<div class="button icon right secondary" id="btn_server_popup_history" title="Server History..." onClick="$P().popupServerHistory()"><i class="mdi mdi-history"></i></div>';
 				
-				if (app.isAdmin() && this.online) html += '<div class="button icon right" title="Open Terminal..." onClick="$P().goServerTerminal()"><i class="mdi mdi-console"></i></div>';
+				if (app.isAdmin() && this.online && this.server.info?.features?.terminal) {
+					html += '<div class="button icon right" title="Open Terminal..." onClick="$P().goServerTerminal()"><i class="mdi mdi-console"></i></div>';
+				}
 				
 				// if (!online) html += '<div class="box_title_note">As of ' + this.getShortDateTimeText(snapshot.date) + '</div>';
 				// html += '<div class="button right danger" onClick="$P().showDeleteSnapshotDialog()"><i class="mdi mdi-trash-can-outline">&nbsp;</i>Delete...</div>';
