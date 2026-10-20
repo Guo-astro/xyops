@@ -3298,6 +3298,18 @@ Page.Job = class Job extends Page.PageUtils {
 		this.renderCurrentSlide();
 	}
 	
+	goServerTerminal() {
+		// open server terminal
+		var server_id = this.job.server;
+		if (!server_id) return app.doError("Cannot open terminal: Job did not run on a server.");
+		
+		var server = find_object(app.servers, { id: server_id });
+		if (!server) return app.doError("Cannot open terminal: Server is not online.");
+		if (!server.info?.features?.terminal) return app.doError("Server does not support live terminal access.");
+		
+		window.open( app.base_api_url + '/app/term?server=' + server_id );
+	}
+	
 	do_delete_job() {
 		// delete job and leave page
 		var self = this;

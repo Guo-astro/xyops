@@ -1397,6 +1397,9 @@ Page.Servers = class Servers extends Page.ServerUtils {
 	
 	goServerTerminal() {
 		// open server terminal
+		if (!this.online) return app.doError("Cannot open terminal: server is not online.");
+		if (!this.server?.info?.features?.terminal) return app.doError("This server does not support live terminal access.");
+		
 		window.open( app.base_api_url + '/app/term?server=' + this.server.id );
 	}
 	

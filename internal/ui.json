@@ -1176,14 +1176,16 @@
 			"do_download_job_data": { "keys": ["KeyD"], "title": "Download Job JSON" },
 			"do_delete_job": { "keys": ["Backspace", "Delete"], "title": "Delete Job" },
 			"prevSlide": { "keys": ["ArrowLeft"], "title": "Previous Media Slide" },
-			"nextSlide": { "keys": ["ArrowRight"], "title": "Next Media Slide" }
+			"nextSlide": { "keys": ["ArrowRight"], "title": "Next Media Slide" },
+			"goServerTerminal": { "keys": ["KeyT"], "title": "Open Server Terminal" }
 		},
 		"Servers": {
 			"showEditServerDialog": { "sub": "view", "keys": ["KeyE"], "title": "Edit Server" },
 			"chooseHistoricalView": { "sub": "view", "keys": ["KeyH"], "title": "Historical View" },
 			"createSnapshot": { "sub": "view", "keys": ["Meta+KeyS", "Control+KeyS"], "title": "Take Snapshot" },
 			"openWatchDialog": { "sub": "view", "keys": ["KeyW"], "title": "Add Server Watch" },
-			"showAddServerDialog": { "sub": "list", "keys": ["KeyA"], "title": "Add New Server" }
+			"showAddServerDialog": { "sub": "list", "keys": ["KeyA"], "title": "Add New Server" },
+			"goServerTerminal": { "sub": "view", "keys": ["KeyT"], "title": "Open Server Terminal" }
 		},
 		"ServerHist": {
 			"histNavPrev": { "keys": ["ArrowLeft"], "title": "Previous Time Slice" },

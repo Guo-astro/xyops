@@ -610,11 +610,11 @@ Page.Base = class Base extends Page {
 			var server_id = $(elem).data('server');
 			var server = find_object(app.servers, { id: server_id });
 			if (!server) {
-				app.doError("Cannot open terminal: server is not online.");
+				app.doError("Cannot open terminal: Server is not online.");
 				return false;
 			}
 			if (!server.info?.features?.terminal) {
-				app.doError("Server does not support live terminals.");
+				app.doError("Server does not support live terminal access.");
 				return false;
 			}
 			window.open( app.base_api_url + '/app/term?server=' + server_id );
