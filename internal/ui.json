@@ -185,6 +185,8 @@
 		"server_update": "Server Information Updated",
 		"server_watch": "Server Watch Set",
 		
+		"term_start": "Terminal Started",
+		
 		"master_primary": "Conductor Server Became Primary",
 		"peer_add": "Conductor Server Added",
 		"peer_disconnect": "Conductor Server Disconnected",
@@ -283,6 +285,8 @@
 		"server_update": "Server information was updated: [hostname]",
 		"server_watch": "A watch for [duration] was set on the server: [hostname]",
 		
+		"term_start": "Terminal opened on server: [server_title] ([terminal.id])",
+		
 		"master_primary": "Conductor server is now primary: [host]",
 		"peer_add": "Conductor server added to the network: [host]",
 		"peer_disconnect": "Conductor serfer disconnected from the network: [host]",
@@ -311,6 +315,7 @@
 		"users": "^(user_.+)$",
 		"roles": "^(role_.+)$",
 		"servers": "^(server_.+)$",
+		"terminals": "^(term_.+)$",
 		"peers": "^(peer_.+|master_primary)$",
 		"system": "^(state_update|internal_job|config_update)$"
 	},
@@ -331,6 +336,7 @@
 		"^critical": { "icon": "fire-alert", "label": "Critical" },
 		"^group": { "icon": "server-network", "label": "Group" },
 		"^server": { "icon": "router-network", "label": "Server" },
+		"^term_": { "icon": "console", "label": "Terminal" },
 		"^master": { "icon": "database", "label": "Conductor" },
 		"^peer": { "icon": "database", "label": "Conductor" },
 		"^monitor": { "icon": "chart-line", "label": "Monitor" },
