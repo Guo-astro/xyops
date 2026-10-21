@@ -3181,7 +3181,7 @@ Page.Job = class Job extends Page.PageUtils {
 				'<i class="mdi mdi-floppy">&nbsp;</i>' + get_text_from_bytes( file.size || 0 ),
 				self.getRelativeDateTime(file.date),
 				nice_source,
-				self.getNiceJob(file.job || job.id, self.isWorkflow),
+				self.getNiceJob({ id: file.job || job.id }, self.isWorkflow),
 				self.getNiceServer(file.server, true),
 				actions.join(' | ')
 			];
