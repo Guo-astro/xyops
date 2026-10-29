@@ -7,6 +7,9 @@
 	"homepage": "https://github.com/pixlcore/xyops",
 	"license": "BSD-3-Clause",
 	"main": "lib/main.js",
+	"engines": {
+		"node": ">=22.12.0"
+	},
 	"scripts": {
 		"start": "bin/control.sh start",
 		"debug": "bin/control.sh debug",
